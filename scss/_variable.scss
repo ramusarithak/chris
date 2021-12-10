@@ -1,0 +1,13 @@
+.header-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color:#f54848;
+    padding: 2rem;
+    .btn-primary{
+        margin-top: 1rem;
+    }
+}
