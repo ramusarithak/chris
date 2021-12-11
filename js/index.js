@@ -1,7 +1,6 @@
 
 document.getElementById("formAct").addEventListener("submit", submitForm);
 
-
 function submitForm(e) {
   e.preventDefault();
   // var name = getInputVal("name");
@@ -19,7 +18,6 @@ $(".btn").click(function () {
   // $(".form-control").val("");
   console.log("form  r r r", $("#name").val());
   // $(".form-control").val("");
- 
   writeData($("#name").val());
 });
 
@@ -47,9 +45,14 @@ database.on("value", function (snapshot) {
 
 function writeData(name) {
   console.log("dadadadadad",name)
+  localStorage.setItem('yourName', name); 
   database.push().set({
     name: name,
   });
+  window.location.href = "/chris.html";
+}
+function getValue() {
+	return localStorage.getItem('yourName');  
 }
 function renderUi(obj) {
   console.log("ght", database,obj);
