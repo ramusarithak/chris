@@ -1,3 +1,7 @@
+#formAct {
+  background-color: #f54848;
+}
+
 .header-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,12 +16,43 @@
   width: 100%;
   max-width: 800px;
   margin: auto;
-  background-color: #f54848;
   padding: 2rem;
+  height: 100vh;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  color: #ffffff;
+  font-size: 14rem;
+  line-height: 0.9;
+  text-align: center;
 }
 
 .header-div .btn-primary {
   margin-top: 1rem;
+  z-index: 1;
+}
+
+.header-div p {
+  font-size: 34px;
+  color: black;
+}
+
+.header-div input {
+  z-index: 10;
+}
+
+.header-div ::before {
+  content: "";
+  background-image: url("../img/bgbg.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
 }
 
 .wishes-content {
